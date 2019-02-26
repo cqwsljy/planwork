@@ -27,9 +27,9 @@ if N == 0:
         df.loc[df[datafreq[i]]==1,'proStandard'] =  p[i]/a[i]
     index = copy.deepcopy(df.index)
     index = np.random.permutation(index)
-    data = dfh['姓名'].tolist()
-    data.append(df['姓名'][index[0]])
-    dfh = pd.DataFrame(data,columns=['姓名'])
+    data = dfh['name'].tolist()
+    data.append(df['name'][index[0]])
+    dfh = pd.DataFrame(data,columns=['name'])
     df.loc[index[0],'date'] = df['date'][index[0]] + 1
     N = sum(df['date'])
     df['proActual'] = df['date'] / N
@@ -41,9 +41,9 @@ else:
     dftemp = dftemp.sort_values('dateDiff')
     index = copy.deepcopy(dftemp.index)
     index = np.random.permutation(index)
-    data = dfh['姓名'].tolist()
-    data.append(df['姓名'][index[0]])
-    dfh = pd.DataFrame(data,columns=['姓名'])
+    data = dfh['name'].tolist()
+    data.append(df['name'][index[0]])
+    dfh = pd.DataFrame(data,columns=['name'])
     df.loc[index[0],'date'] = df['date'][index[0]] + 1
     N = sum(df['date'])
     df['proActual'] = df['date'] / N
