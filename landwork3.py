@@ -15,7 +15,7 @@ df = pd.read_excel("C:/Users/Alpha/Desktop/planwork/df.xlsx")
 dfh = pd.read_excel("C:/Users/Alpha/Desktop/planwork/dfh.xlsx")
 
 df = df.fillna(0)
-df = df[df['skill'] == '甲']
+#df = df[df['skill'] == '甲']
 datafreq = ['often','some']
 a1 = np.double(sum(df['often']))
 a2 = np.double(sum(df['some']))
