@@ -8,8 +8,11 @@ Created on Mon Feb 25 22:36:55 2019
 import pandas as pd
 import numpy as np
 from numpy.linalg import solve
+
 df = pd.read_excel("E:/Part-time/planwork/df.xlsx")
 dfh = pd.read_excel("E:/Part-time/planwork/dfh.xlsx")
+
+
 df = df.fillna(0)
 df = df[df['skill'] == '甲']
 datafreq = ['often','some','just']
