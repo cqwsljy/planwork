@@ -17,10 +17,10 @@ dfh = pd.read_excel("C:/Users/Alpha/Desktop/planwork/dfh.xlsx")
 df = df.fillna(0)
 df = df[df['skill'] == '甲']
 datafreq = ['often','some']
-a1 = sum(df['often'])
-a2 = sum(df['some'])
+a1 = np.double(sum(df['often']))
+a2 = np.double(sum(df['some']))
 a = [a1,a2]
-N = sum(df['date'])
+N = np.double(sum(df['date']))
 
 if N == 0:
     for i in range(len(datafreq)):
